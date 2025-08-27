@@ -1,0 +1,31 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+{{ if ne .Params.showMeta false }}
+<div class="page-meta">
+  <div>
+    <span>Summary:</span>
+    <div>{{ .Summary }}</div>
+  </div>
+  {{ if .Params.showReadingTime }}
+  <div>
+    <span>Reading time:</span>
+    <div>{{ .ReadingTime }} minutes</div>
+  </div>
+  {{ end }}
+  <div>
+    <span>Commit:</span>
+    <div>
+      {{ with .GitInfo }}
+      <a
+        href="https://github.com/micheledinelli/micheledinelli.github.io/commit/{{ .AbbreviatedHash }}"
+        >{{ .AbbreviatedHash }}</a
+      >
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end}}
+
+<div class="page-content">{{ .Content }}</div>
+
+{{/* {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }} */}} {{ end }}
