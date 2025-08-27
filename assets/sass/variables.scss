@@ -26,6 +26,8 @@
 
   // Layout
   --body-width: 45%;
+  --body-margin: 0 auto;
+
   --header-margin: 2rem 0 2rem 0;
   --nav-margin: 0 0;
   --nav-width: 70%;
@@ -33,7 +35,16 @@
   --build-margin: 1rem 0;
   --avatar-container-margin: 2rem 0 2rem 0;
 
+  --section-list-margin: 1rem 0;
+  --section-list-item-padding: 0.3rem 0;
+  --section-list-item-border-bottom: 1px solid var(--muted-color);
+
+  --page-content-margin: 1rem 0;
+  --page-meta-border-bottom: 1px solid var(--muted-color);
+  --page-meta-padding: 0.3rem 0;
+
   // Code
+  --highlight-margin: 1rem 0;
   --code-padding: 1rem;
   --code-border-radius: 10px;
   --copy-code-button-border-radius: 7px;

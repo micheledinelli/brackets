@@ -2,19 +2,22 @@
 <h2>{{ .Title }}</h2>
 {{ if ne .Params.showMeta false }}
 <div class="page-meta">
+  {{ if ne .Params.showSummary false }}
   <div>
     <span>Summary:</span>
     <div>{{ .Summary }}</div>
   </div>
-  {{ if .Params.showReadingTime }}
+  {{ end }}
+  {{ if ne .Params.showReadingTime false }}
   <div>
     <span>Reading time:</span>
     <div>{{ .ReadingTime }} minutes</div>
   </div>
   {{ end }}
+  {{ if ne .Params.showCommit false }}
   <div>
     <span>Commit:</span>
-    <div>
+    <div class="mono">
       {{ with .GitInfo }}
       <a
         href="https://github.com/micheledinelli/micheledinelli.github.io/commit/{{ .AbbreviatedHash }}"
@@ -23,6 +26,7 @@
       {{ end }}
     </div>
   </div>
+  {{ end }}
 </div>
 {{ end}}
 
