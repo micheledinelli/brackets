@@ -42,6 +42,8 @@
   --page-content-margin: 1rem 0;
   --page-meta-border-bottom: 1px solid var(--muted-color);
   --page-meta-padding: 0.3rem 0;
+  --page-meta-div-flex: 5;
+  --page-meta-span-flex: 1;
 
   // Code
   --highlight-margin: 1rem 0;
@@ -73,5 +75,7 @@
     --footer-margin: 2rem 0 0 0;
     --avatar-container-margin: 2rem 0 2rem 0;
     --img-max-width: 100%;
+    --page-meta-div-flex: 4;
+    --page-meta-span-flex: 2;
   }
 }

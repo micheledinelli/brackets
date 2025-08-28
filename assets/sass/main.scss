@@ -225,11 +225,11 @@ a {
     gap: 1rem;
 
     > div {
-      flex: 4;
+      flex: var(--page-meta-div-flex);
     }
 
     > span {
-      flex: 1;
+      flex: var(--page-meta-span-flex);
     }
   }
 }

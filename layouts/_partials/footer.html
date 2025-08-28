@@ -27,7 +27,7 @@
           {{ with $val.url }}
           {{ $icon := resources.Get (printf "icons/%s.svg" $key) }}
             {{ if $icon }}
-              <a href="{{ $val.url }}" target="_blank" class="icon-link muted">
+              <a href="{{ $val.url }}" target="_blank" class="icon-link">
                 <span class="icon">
                   {{ $icon.Content | safeHTML }}
                 </span>
