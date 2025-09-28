@@ -1,0 +1,9 @@
+<div id="map-{{ .Get "id" }}" class="gpx-map" style="height: {{ default "400px" (.Get "height") }};"></div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    if (typeof initGPXMap !== "undefined") {
+      initGPXMap("map-{{ .Get "id" }}", "{{ .Get "src" }}");
+    }
+  });
+</script>
